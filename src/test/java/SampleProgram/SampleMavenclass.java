@@ -11,6 +11,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import Elements.Thank_You_Page_Script_Elements;
@@ -43,10 +44,13 @@ public class SampleMavenclass extends Basesetup {
 	public String Color;
 	public String Split_Subtotal;
 
+	
+	@Parameters("Browser")
 	// open browser
 	@BeforeTest
 	public void setUp() throws BiffException, AWTException, Exception {
-		driver = getDriver1();
+		
+		driver = getDriver3("Chrome");
 		driver.manage().window().maximize();
 		driver.get(baseUrlUI);
 		//CommonUtils.Authonitication_Login();
@@ -61,6 +65,8 @@ public class SampleMavenclass extends Basesetup {
 
 	}
 
+	
+	
 	@Test(priority =0)
 	public void TC51() throws Exception {
 

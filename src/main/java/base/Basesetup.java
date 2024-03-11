@@ -27,6 +27,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.logging.LogType;
 import org.openqa.selenium.logging.LoggingPreferences;
 import org.openqa.selenium.opera.OperaDriver;
+import org.testng.annotations.Parameters;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import jxl.read.biff.BiffException;
@@ -89,11 +90,38 @@ public class Basesetup {
 	 * @return
 	 */
 
+	
+
 	public static WebDriver getDriver1() {
 		//System.setProperty("webdriver.chrome.driver", "D:\\chromedriver\\chromedriver.exe");
 		//ChromeOptions options = new ChromeOptions();
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
+		return driver;
+		//driver.manage().window().maximize();
+		
+		//options.addArguments("--start-maximized");
+		
+	}
+	
+	
+	@Parameters("Browser")
+	public static WebDriver getDriver3(String browsername) {
+		System.out.println("Parameter value is "+browsername);
+		WebDriver driver=null;
+		if(browsername.contains("Chrome"))
+		{
+			WebDriverManager.chromedriver().setup();
+			driver = new ChromeDriver();
+		}
+		else if(browsername.contains("Edge"))
+		{
+			WebDriverManager.edgedriver().setup();
+			driver = new EdgeDriver();
+		}
+		//System.setProperty("webdriver.chrome.driver", "D:\\chromedriver\\chromedriver.exe");
+		//ChromeOptions options = new ChromeOptions();
+		
 		return driver;
 		//driver.manage().window().maximize();
 		
