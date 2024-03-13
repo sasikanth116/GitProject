@@ -3,7 +3,7 @@
 <suite name="Suite">
   <test thread-count="5" name="JenkiknsTestng">
     <classes>
-      <class name="SampleProgram.SampleMavenclass"/>
+      <class name="SampleProgram.SampleProgram"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
