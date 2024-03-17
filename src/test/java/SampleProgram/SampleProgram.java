@@ -2,13 +2,16 @@ package SampleProgram;
 import org.openqa.selenium.By;  
 import org.openqa.selenium.WebDriver;  
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
 
 import base.Basesetup;
 import io.github.bonigarcia.wdm.WebDriverManager;
   
 public class SampleProgram extends Basesetup  {  
   
-    public static void main(String[] args) {  
+	
+	@Test
+    public  void run() {  
         
     // declaration and instantiation of objects/variables  
     	WebDriverManager.chromedriver().setup();
@@ -17,11 +20,7 @@ public class SampleProgram extends Basesetup  {
       
 // Launch website  
     driver.navigate().to("http://www.google.com/");  
-    driver.findElement(By.id("lst-ib")).sendKeys("jenkins");  
-          
-    // Click on the search button  
-    driver.findElement(By.name("btnK")).click();  
-      
+   // driver.close();      
     }  
   
 }  

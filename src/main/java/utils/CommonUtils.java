@@ -692,7 +692,7 @@ public class CommonUtils extends Basesetup {
 
 	}
 
-	public static void CaptureScreenshot_for_Element(WebDriver driver,WebElement element,String Url, String TestcaseID,String PositiveData,String NegativeData) throws IOException
+	/*public static void CaptureScreenshot_for_Element(WebDriver driver,WebElement element,String Url, String TestcaseID,String PositiveData,String NegativeData) throws IOException
 	{  
 		Wait=new WebDriverWait(driver,10);
 		try {
@@ -971,7 +971,7 @@ public class CommonUtils extends Basesetup {
 		//	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(e)));
 	}
 
-	public static void Click(WebElement element) {
+	/*public static void Click(WebElement element) {
 		WebDriverWait wait = new WebDriverWait(driver, 80); 
 		wait.until(ExpectedConditions.visibilityOf(element)).click();
 	}

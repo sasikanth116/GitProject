@@ -26,8 +26,7 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.logging.LogType;
 import org.openqa.selenium.logging.LoggingPreferences;
-import org.openqa.selenium.opera.OperaDriver;
-import org.testng.annotations.Parameters;
+
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import jxl.read.biff.BiffException;
@@ -105,7 +104,7 @@ public class Basesetup {
 	}
 	
 	
-	@Parameters("Browser")
+	
 	public static WebDriver getDriver3(String browsername) {
 		System.out.println("Parameter value is "+browsername);
 		WebDriver driver=null;
@@ -213,8 +212,7 @@ public class Basesetup {
             driver = new FirefoxDriver(options);    
             break;
         case "Opera":
-            System.setProperty("webdriver.opera.driver", "F:\\Sample\\Revalshop\\operadriver.exe");
-            driver = new OperaDriver();
+          ;
 
 
         }    
