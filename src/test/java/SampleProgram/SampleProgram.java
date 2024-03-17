@@ -11,7 +11,7 @@ public class SampleProgram extends Basesetup  {
   
 	
 	@Test
-    public  void run() {  //commited   
+    public  void run() {  //commited   in github
     // declaration and instantiation of objects/variables  
     	WebDriverManager.chromedriver().setup();
     //System.setProperty("webdriver.chrome.driver", "D:\\chromedriver\\chromedriver.exe");  
